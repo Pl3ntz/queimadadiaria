@@ -62,6 +62,23 @@ export function Setup({ onComplete }: SetupProps) {
             </select>
           </div>
 
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Dias de descanso
+            </label>
+            <select
+              value={daysPerWeek}
+              onChange={(e) => setDaysPerWeek(Number(e.target.value))}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+            >
+              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+                <option key={num} value={num}>
+                  {num} {num === 1 ? 'dia' : 'dias'}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <button
             type="submit"
             className="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium text-sm"
