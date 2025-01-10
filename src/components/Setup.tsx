@@ -7,7 +7,7 @@ interface SetupProps {
 
 export function Setup({ onComplete }: SetupProps) {
   const [startDate, setStartDate] = useState('');
-  const [daysPerWeek, setDaysPerWeek] = useState(3);
+  const [daysPerWeek, setDaysPerWeek] = useState(1);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
